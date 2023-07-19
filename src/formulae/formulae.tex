@@ -18,6 +18,7 @@ From stackoverflow, these are pure central factorial numbers already
     k! T(n,k) = \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
 \end{equation*}
 So that central factorial number is, this is the function \texttt{Central1(n,k)} in mathematica package
+and it is true and holds in mathematica program
 \begin{equation*}
     T(n,k) = \frac{1}{k!} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
 \end{equation*}
@@ -28,8 +29,7 @@ Let be $(k-1)! T(n,k)$
 \end{equation*}
 Let be $(2k-1)! T(2n, 2k)$
 \begin{equation*}
-(2k-1)
-    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+(2k-1)!T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
 \end{equation*}
 Since that OEIS formula defined as
 \begin{equation*}
