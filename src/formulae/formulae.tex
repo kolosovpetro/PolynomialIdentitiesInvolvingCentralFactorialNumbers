@@ -1,0 +1,21 @@
+From OEIS, note that this is not Central factorial number itself
+\begin{equation*}
+    T_{\mathrm{OEIS}} (n,k) = \frac{1}{m} \sum_{j=0}^{m} (-1)^{j} \binom{2m}{j} (m-j)^{2n}
+\end{equation*}
+where $m=n-k+1$.
+So that
+\begin{equation*}
+    T_{\mathrm{OEIS}} = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2n-2k+2}{j} (n-k+1-j)^{2n}
+\end{equation*}
+From stackoverflow, these are pure central factorial numbers already
+\begin{equation*}
+    k! T(n,k) = \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
+\end{equation*}
+Let be $(k-1)! T(n,k)$
+\begin{equation*}
+    (k-1)!T(n,k) = \frac{1}{k} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
+\end{equation*}
+Let be $(2k-1)! T(2n, 2k)$
+\begin{equation*}
+    (2k-1)!T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+\end{equation*}
