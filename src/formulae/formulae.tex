@@ -1,4 +1,5 @@
-From OEIS, note that this is not Central factorial number itself
+From OEIS, note that this is not Central factorial number itself, this formula is in the mathematica package as
+\texttt{OEISFormula}
 \begin{equation*}
     T_{\mathrm{OEIS}} (n,k) = \frac{1}{m} \sum_{j=0}^{m} (-1)^{j} \binom{2m}{j} (m-j)^{2n}
 \end{equation*}
@@ -7,15 +8,38 @@ So that
 \begin{equation*}
     T_{\mathrm{OEIS}} = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2n-2k+2}{j} (n-k+1-j)^{2n}
 \end{equation*}
+Also, OEIS sequence is defined by
+\begin{equation*}
+    T_{\mathrm{OEIS}} = (2(n-k) + 1)! T(2n, 2n-2k)
+\end{equation*}
+where $T(2n, 2n-2k)$ are central factorial numbers.
 From stackoverflow, these are pure central factorial numbers already
 \begin{equation*}
     k! T(n,k) = \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
 \end{equation*}
+So that central factorial number is, this is the function \texttt{Central1(n,k)} in mathematica package
+\begin{equation*}
+    T(n,k) = \frac{1}{k!} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
+\end{equation*}
 Let be $(k-1)! T(n,k)$
 \begin{equation*}
-    (k-1)!T(n,k) = \frac{1}{k} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
+(k-1)
+    !T(n,k) = \frac{1}{k} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
 \end{equation*}
 Let be $(2k-1)! T(2n, 2k)$
 \begin{equation*}
-    (2k-1)!T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+(2k-1)
+    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
 \end{equation*}
+Since that OEIS formula defined as
+\begin{equation*}
+    \begin{split}
+        &T(2n, 2n-2k) = \frac{1}{(2n-2k)!} \sum_{j=0} \binom{2n-2k}{j} (-1)^{j} \left( n - k - j \right)^{n} \\
+        &T_{\mathrm{OEIS}} = (2(n-k) + 1)! T(2n, 2n-2k) = (2n-2k+1)! T(2n, 2n-2k)
+    \end{split}
+\end{equation*}
+Then
+\begin{equation*}
+    T_{\mathrm{OEIS}} = (2n-2k+1) \sum_{j=0} \binom{2n-2k}{j} (-1)^{j} (n-k-j)^{2n}
+\end{equation*}
+Above is \texttt{OEISFormula2} in mathematica package
