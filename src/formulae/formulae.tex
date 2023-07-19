@@ -36,10 +36,13 @@ Let be $(k-1)! T(n,k)$
 \end{equation*}
 Let be $(2k-1)! T(2n, 2k)$ in is true and checked in mathematica as \texttt{KnuthCoefficient2}
 \begin{equation*}
-    \begin{split}
-    (2k-1)
-        ! \cdot T(2n, 2k)
-        &= \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \\
-        &= \frac{1}{k} \sum_{j=0}^{k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \\
-    \end{split}
+    (2k-1)! \cdot T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+\end{equation*}
+Let be $(2k-1)! T(2n, 2k)$ in is true and checked in mathematica as \texttt{KnuthCoefficient3}
+\begin{equation*}
+    (2k-1)! \cdot T(2n, 2k) = \frac{1}{k} \sum_{j=0}^{k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+\end{equation*}
+Let be $(2k-1)! T(2n, 2k)$ in is true and checked in mathematica as \texttt{KnuthCoefficient4}
+\begin{equation*}
+(2k-1)! \cdot T(2n, 2k) = \frac{1}{k} \sum_{j=0}^{k} \binom{2k}{k-j} (-1)^{k-j} j^{2n}
 \end{equation*}

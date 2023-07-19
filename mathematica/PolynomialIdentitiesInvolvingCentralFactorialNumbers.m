@@ -9,6 +9,7 @@ KnuthCoefficient:: usage= "Returns (2k-1)! T(2m, 2k) from https://arxiv.org/pdf/
 KnuthOddPower:: usage= "Returns n^(2m-1) identity from https://arxiv.org/pdf/math/9207222.pdf page 10";
 KnuthCoefficient2:: usage= "Returns (2k-1)! T(2m, 2k)";
 KnuthCoefficient3:: usage= "Returns (2k-1)! T(2m, 2k)";
+KnuthCoefficient4:: usage= "Returns (2k-1)! T(2m, 2k)";
 
 Begin["`Private`"]
 
@@ -18,6 +19,7 @@ Central1[n_, k_] := (1/ k!) * Sum[ Binomial[k, j] * (-1)^j * (1/2 * k - j)^n, {j
 KnuthCoefficient[n_, k_] := (2k-1)! * Central1[2n, 2k];
 KnuthCoefficient2[n_, k_] := (1/(2k)) * Sum[ Binomial[2k, j] * (-1)^j * (k - j)^(2n), {j, 0, 2k}];
 KnuthCoefficient3[n_, k_] := (1 / k) * Sum[ Binomial[2k, j] * (-1)^j * (k - j)^(2n), {j, 0, k}];
+KnuthCoefficient4[n_, k_] := (1 / k) * Sum[ Binomial[2k, k-j] * (-1)^(k-j) * (j)^(2n), {j, 0, k}];
 KnuthOddPower[n_, m_] := Sum[KnuthCoefficient[m, k] * Binomial[n + k - 1, 2k-1], {k, 1, m}];
 
 End[ ]
