@@ -27,19 +27,8 @@ Let be $(k-1)! T(n,k)$
 (k-1)
     !T(n,k) = \frac{1}{k} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
 \end{equation*}
-Let be $(2k-1)! T(2n, 2k)$
+Let be $(2k-1)! T(2n, 2k)$ in is true and checked in mathematica as \texttt{KnuthCoefficient2}
 \begin{equation*}
-(2k-1)!T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+(2k-1)
+    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
 \end{equation*}
-Since that OEIS formula defined as
-\begin{equation*}
-    \begin{split}
-        &T(2n, 2n-2k) = \frac{1}{(2n-2k)!} \sum_{j=0} \binom{2n-2k}{j} (-1)^{j} \left( n - k - j \right)^{n} \\
-        &T_{\mathrm{OEIS}} = (2(n-k) + 1)! T(2n, 2n-2k) = (2n-2k+1)! T(2n, 2n-2k)
-    \end{split}
-\end{equation*}
-Then
-\begin{equation*}
-    T_{\mathrm{OEIS}} = (2n-2k+1) \sum_{j=0} \binom{2n-2k}{j} (-1)^{j} (n-k-j)^{2n}
-\end{equation*}
-Above is \texttt{OEISFormula2} in mathematica package—it does not work.
