@@ -5,8 +5,15 @@ From OEIS, note that this is not Central factorial number itself, this formula i
 \end{equation*}
 where $m=n-k+1$.
 So that
+\begin{equation}
+    \begin{split}
+        T_{\mathrm{OEIS}} (n,k) &= \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2(n-k+1)}{j} ([n-k+1]-j)^{2n} \\
+        T_{\mathrm{OEIS}} (n,k) &= \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2n-2k+2}{j} (n-k+1-j)^{2n}
+    \end{split}\label{eq:luschny-oeis}
+\end{equation}
+Furthermore, $T_{\mathrm{OEIS}}$ may be turned into changing the summation order from $n-k+1$ to $k$
 \begin{equation*}
-    T_{\mathrm{OEIS}} = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2n-2k+2}{j} (n-k+1-j)^{2n}
+    T_{\mathrm{OEIS}} (n, n-k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{j} \binom{2k}{j} (k-j)^{2n}
 \end{equation*}
 Also, OEIS sequence is defined by
 \begin{equation*}
@@ -29,6 +36,10 @@ Let be $(k-1)! T(n,k)$
 \end{equation*}
 Let be $(2k-1)! T(2n, 2k)$ in is true and checked in mathematica as \texttt{KnuthCoefficient2}
 \begin{equation*}
-(2k-1)
-    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+    \begin{split}
+    (2k-1)
+        ! \cdot T(2n, 2k)
+        &= \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \\
+        &= \frac{1}{k} \sum_{j=0}^{k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \\
+    \end{split}
 \end{equation*}
