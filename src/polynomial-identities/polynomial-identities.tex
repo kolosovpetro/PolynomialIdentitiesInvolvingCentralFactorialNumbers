@@ -1,0 +1,37 @@
+\subsection{Central factorial numbers}\label{subsec:central-factorial-numbers}
+\begin{align*}
+(2k-1)
+    ! T(2n,2k) &= \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n} \\
+    (2k-1)! T(2n,2k) &= \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n} \\
+    (2k-1)! T(2n,2k) &= \frac{1}{k} 2k! \left( \stirlingii{2n}{2k} -  \sum_{j=k+1}^{2k} (-1)^j \binom{2k}{j} (k-j)^{2n}\right) \\
+\end{align*}
+
+\subsection{Knuth's formula - approach 1 (to be verified all)}\label{subsec:knuth's-formula---approach-1-(to-be-verified-all)}
+\begin{align*}
+    n^{2m-1}
+    &= \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1} \quad checked \\
+    &= \sum_{k=1}^{m} \mathcal{T}(m,k) \binom{n+k-1}{2k-1} \quad checked \;  knuth1\\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \binom{n+k-1}{2k-1} \binom{2k}{k-j} j^{2m} \quad checked \; knuth2 \\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{k-j} j^{2m} \quad checked \; knuth3 \\
+\end{align*}
+\begin{align*}
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{2k} \binom{2k}{k-j} j^{2m}  \\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \frac{2k}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m} \quad checked \; knuth4 \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m} \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{n+j} \binom{n+j}{k+j} j^{2m} \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k+j} \binom{k-j}{n-k} j^{2m} \\
+\end{align*}
+
+\subsection{Knuth's formula - approach 2 (to be verified all)}\label{subsec:knuth's-formula---approach-2-(to-be-verified-all)}
+\begin{align*}
+    n^{2m-1}
+    &= \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}  \\
+    &= \sum_{k=1}^{m} \mathcal{T}(m,k) \binom{n+k-1}{2k-1} \\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^j}{k} \binom{n+k-1}{2k-1} \binom{2k}{j} (k-j)^{2m}  \\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}  \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}  \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{n+k-j} \binom{n+k-j}{2k-j} (k-j)^{2m}  \\
+    &= \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} (k-j)^{2m}  \\
+    &= 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} (k-j)^{2m} \\
+\end{align*}
+

@@ -39,6 +39,8 @@
 \newcommand \qpowerDerivativeHO [2] {\mathcal{D}_{q}^{#2} #1}                % 1 - function; 2 - order
 \newcommand \finiteDifferenceHO [2] {\Delta^{#2} #1}                         % 1 - function; 2 - order
 \newcommand \pTsDerivativeHO [3] {\frac{\partial^{#3}}{\Delta {#2}^{#3}} #1} % 1 - function; 2 - variable;
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
+\newcommand{\eulerianNumber}{\genfrac{\langle}{\rangle}{0pt}{}}
 
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
@@ -49,21 +51,19 @@
 
 \numberwithin{equation}{section}
 
-\title[Polynomial identities involving Central Factorial numbers]
-{Polynomial identities involving Central Factorial numbers}
+\title[Polynomial identities auxiliary]
+{Polynomial identities auxiliary}
 \author[Petro Kolosov]{Petro Kolosov}
-\email{kolosovp94@gmail.com}
 \keywords{
     Polynomials,
     Polynomial identities,
     Faulhaber's formula,
     Cental Factorial Numbers
 }
-\urladdr{https://kolosovpetro.github.io}
 \subjclass[2010]{26E70, 05A30}
 \date{\today}
 \hypersetup{
-    pdftitle={Polynomial identities involving Central Factorial numbers},
+    pdftitle={Polynomial identities auxiliary},
     pdfsubject={
         Polynomials,
         Polynomial identities,
@@ -80,13 +80,15 @@
 }
 \begin{document}
     \begin{abstract}
+        Polynomial identities auxiliary
     \end{abstract}
 
     \maketitle
 
     \tableofcontents
 
-    \section{Formulae}\label{sec:formulae}
-    \input{formulae}
+
+    \section{Polynomial identities auxiliary}
+    \input{polynomial-identities}
 
 \end{document}
