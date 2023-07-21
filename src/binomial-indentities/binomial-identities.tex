@@ -1,0 +1,23 @@
+%! suppress = EscapeUnderscore
+%! suppress = PrimitiveEquation
+
+\subsection{Part 1}\label{subsec:part-1}
+$$\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}$$
+$$\binom{n}{k} = \frac{n^{\underline{k}}}{k!}$$
+$$\sum_{r=0}^{n} \binom{r}{c} = \binom{n+1}{c+1}$$
+$$\sum_{k=0}^{n} \binom{r+k}{k} = \binom{r+n+1}{n}$$
+$$\sum_{k=0}^{m} \binom{n-k}{m-k} = \binom{n+1}{m}$$
+$$\sum_{k=0}^{n} \binom{n-k}{k} = f_{n+1}$$
+$$k \binom{n}{k} = n \binom{n-1}{k-1}$$
+$$\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$$
+$$\sum_{j=0}^{n} \binom{n}{j} \binom{m}{k-j} = \binom{n+m}{k}$$
+
+\subsection{Part2}\label{subsec:part2}
+$$k \binom{n}{k} = n \binom{n-1}{k-1}$$
+$$\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$$
+$$\frac{k+1}{n+1} \binom{n+1}{k+1} = \binom{n}{k}$$
+$$\binom{n+1}{k+1} = \frac{n+1}{k+1} \binom{n}{k}$$
+
+\subsection{Part 3}\label{subsec:part-3}
+$$\binom{t}{r} \binom{r}{k} = \binom{t}{k} \binom{t-k}{r-k} = \binom{t}{k} \binom{t-k}{t-r} = \binom{t}{t-k} \binom{t-k}{t-r}$$
+$$\binom{t}{r} \binom{r}{k} = \binom{t}{k} \binom{t-k}{r-k} = \binom{t}{t-k} \binom{t-k}{r-k} = \binom{t}{r-k} \binom{t-r+k}{t-r} = \binom{t}{r-k} \binom{t-r+k}{k}$$
