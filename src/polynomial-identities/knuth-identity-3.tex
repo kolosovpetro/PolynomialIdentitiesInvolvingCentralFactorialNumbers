@@ -1,1 +1,37 @@
 \subsection{Knuth's formula - approach 3 (to be verified all)}\label{subsec:knuth's-formula---approach-3-(to-be-verified-all)}
+Let be
+\begin{equation*}
+(2k-1)
+    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}
+\end{equation*}
+And
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}
+\end{equation*}
+Then
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2m} \binom{n+k-1}{2k-1}
+\end{equation*}
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{2k} \binom{n+k-1}{2k-1} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+By means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{2k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+Collapsing common terms we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+By means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
+\end{equation*}
+Because the symmetry of binomial coefficients $\binom{n+k}{j} = \binom{n+k}{n+k-j}$ holds, we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{n+k-j} \binom{n+k-j}{2k-j} (k-j)^{2m}
+\end{equation*}
+By means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{2k-j} \binom{n-k+j}{n-k} (k-j)^{2m}
+\end{equation*}
