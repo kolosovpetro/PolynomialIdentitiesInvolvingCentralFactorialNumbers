@@ -1,0 +1,12 @@
+\begin{itemize}
+    \item $T(n,k)$ recursively defines central factorial numbers of the second kind
+    (in the context of Knuth and Riordan (see references)).
+    It is defined in mathematica package as \texttt{CentralFactorialNumber1}
+    \begin{equation*}
+        \begin{cases}
+            T(n,1) &= 1 \\
+            T(n,n) &= 1 \\
+            T(n,k) &= T(n-1, k-1) + k^2 T(n-1, k)
+        \end{cases}
+    \end{equation*}
+\end{itemize}
