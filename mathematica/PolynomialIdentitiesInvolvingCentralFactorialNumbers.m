@@ -15,6 +15,7 @@ OddPowerIdentity22::usage= "Defines an odd power identity n^{2m-1} = \\sum_{k=1}
 OddPowerIdentity23::usage= "Defines an odd power identity n^{2m-1} = 2\\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^{k-j}}{n+k} \\binom{n+k}{2k} \\binom{2k}{k-j} j^{2m}"
 OddPowerIdentity24::usage= "Defines an odd power identity n^{2m-1} = 2\\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^{k-j}}{n+k} \\binom{n+k}{k-j} \\binom{n+j}{k+j} j^{2m}"
 OddPowerIdentity25::usage= "Defines an odd power identity n^{2m-1} = 2\\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^{k-j}}{n+k} \\binom{n+k}{n+j} \\binom{n+j}{k+j} j^{2m}"
+OddPowerIdentity26::usage= "Defines an odd power identity "
 
 Begin["`Private`"]
 CentralFactorialNumber1[n_, n_] = CentralFactorialNumber1[n_, 1] = 1;
@@ -33,6 +34,7 @@ OddPowerIdentity22[n_, m_] := Sum[ Sum[ (-1)^(k-j) / k * (2k)/(n+k)* Binomial[n+
 OddPowerIdentity23[n_, m_] := 2 * Sum[ Sum[ (-1)^(k-j)/(n+k) * Binomial[n+k, 2k] * Binomial[2k, k-j]* j^(2m), {j, 0, k}], {k, 1, m}];
 OddPowerIdentity24[n_, m_] := 2 * Sum[ Sum[ (-1)^(k-j)/(n+k) * Binomial[n+k, k-j] * Binomial[n+j, k+j]* j^(2m), {j, 0, k}], {k, 1, m}];
 OddPowerIdentity25[n_, m_] := 2 * Sum[ Sum[ (-1)^(k-j)/(n+k) * Binomial[n+k, n+j] * Binomial[n+j, k+j]* j^(2m), {j, 0, k}], {k, 1, m}];
+OddPowerIdentity26[n_, m_] := 2 * Sum[ Sum[ (-1)^(k-j)/(n+k) * Binomial[n+k, k+j] * Binomial[n-j, n-k]* j^(2m), {j, 0, k}], {k, 1, m}];
 
 End[ ]
 EndPackage[ ]
