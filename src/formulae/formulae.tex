@@ -27,3 +27,8 @@ Central factorials
 \begin{equation*}
     \centralFactorial{x}{n} = x \prod_{k=1}^{n-1} \left( x+\frac{n}{2}-k \right)
 \end{equation*}
+Then we have power identity given by Knuth
+\begin{equation*}
+    x^m = \sum_{k=1}^{m} T(m, k) \centralFactorial{x}{k} \quad
+    (PowerIdentity1)
+\end{equation*}

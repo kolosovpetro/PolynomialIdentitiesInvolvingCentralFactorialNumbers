@@ -4,9 +4,9 @@ BeginPackage["PolynomialIdentitiesInvolvingCentralFactorialNumbers`"]
 
 CentralFactorialNumber1::usage= "Recursively defines central factorial numbers of the second kind (in the context of Knuth and Riordan https://arxiv.org/pdf/math/9207222.pdf)"
 CentralFactorialNumber2::usage= "Defines central factorial numbers as polynomial T(n,k) = \\frac{1}{k!} \\sum_{j=0}^{k} \\binom{k}{j} (-1)^{j} \\left( \\frac{1}{2}k - j \\right)^{n}"
-CentralFactorial1::usage= "Defines central factorial "
+CentralFactorial1::usage= "Defines central factorial \\centralFactorial{x}{n} = x \\fallingFactorial{x+\\frac{n}{2}-1}{n-1}"
 
-PowerIdentity1::usage= "Defines power identity from Knuth "
+PowerIdentity1::usage= "Defines power identity from Knuth x^m = \\sum_{k=1}^{m} T(m, k) \\centralFactorial{x}{k}"
 
 CFNIdentity1::usage= "Defines an identity in central factorial numbers (2k-1)! T(2n,2k) = \\frac{1}{k} \\sum_{j=0}^{k} (-1)^j \\binom{2k}{j} (k-j)^{2n}"
 CFNIdentity2::usage= "Defines an identity in central factorial numbers (2k-1)! T(2n,2k) = \\frac{1}{k} \\sum_{j=0}^{k} (-1)^{k-j} \\binom{2k}{k-j} j^{2n}"
