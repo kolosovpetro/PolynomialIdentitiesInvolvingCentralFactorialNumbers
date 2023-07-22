@@ -1,0 +1,29 @@
+\subsection{Knuth's formula - approach 1 (to be verified all)}\label{subsec:knuth's-formula---approach-2-(to-be-verified-all)}
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}
+\end{equation*}
+Substituting $(2k-1)!T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n}$ we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^j}{k} \binom{2k}{j} \binom{n+k-1}{2k-1} (k-j)^{2m} \quad
+    (OddPowerIdentity11)
+\end{equation*}
+By means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m} \quad
+    (OddPowerIdentity12)
+\end{equation*}
+Collapsing common terms and by means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m} \quad
+    (OddPowerIdentity13)
+\end{equation*}
+Because the symmetry of binomial coefficients $\binom{n+k}{k-j} = \binom{n+k}{n+k-(k-j)}$ holds, we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{n+k-j} \binom{n+k-j}{2k-j} (k-j)^{2m} \quad
+    (OddPowerIdentity14)
+\end{equation*}
+By means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{2k-j} \binom{n-k+j}{n-k} (k-j)^{2m} \quad
+    (OddPowerIdentity15)
+\end{equation*}
