@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3091,        103]
-NotebookOptionsPosition[      2608,         86]
-NotebookOutlinePosition[      3011,        102]
-CellTagsIndexPosition[      2968,         99]
+NotebookDataLength[      5639,        178]
+NotebookOptionsPosition[      4933,        157]
+NotebookOutlinePosition[      5336,        173]
+CellTagsIndexPosition[      5293,        170]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -82,6 +82,77 @@ Cell[BoxData[
   "Column"]], "Output",
  CellChangeTimes->{3.898977115494316*^9},
  CellLabel->"Out[8]=",ExpressionUUID->"1c75e321-1f11-404e-ace1-22c9b5ba1763"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"CFNIdentity1", "[", 
+     RowBox[{"n", ",", "k"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", " ", "1", ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", " ", "1", ",", " ", "n"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8989779527429934`*^9, 3.8989779542107735`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"13019721-15c9-4209-b0c7-f89163c6b16c"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"{", "1", "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "6"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "30", ",", "120"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "126", ",", "1680", ",", "5040"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "510", ",", "17640", ",", "151200", ",", "362880"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "2046", ",", "168960", ",", "3160080", ",", "19958400", ",", 
+       "39916800"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "8190", ",", "1561560", ",", "57657600", ",", "726485760", 
+       ",", "3632428800", ",", "6227020800"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "32766", ",", "14217840", ",", "988107120", ",", 
+       "22313491200", ",", "210680870400", ",", "871782912000", ",", 
+       "1307674368000"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "131070", ",", "128615880", ",", "16406863200", ",", 
+       "628980992640", ",", "10038995366400", ",", "75583578470400", ",", 
+       "266765571072000", ",", "355687428096000"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "524286", ",", "1160164320", ",", "267911678160", ",", 
+       "16905818966400", ",", "430591742380800", ",", "5269678622208000", ",",
+        "32945548027392000", ",", "101370917007360000", ",", 
+       "121645100408832000"}], "}"}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.8989779548142395`*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"62d86425-2641-4e03-a361-a3fa30e70518"]
 }, Open  ]]
 },
 WindowSize->{1269., 732.5},
@@ -103,7 +174,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 503, 12, 28, "Input",ExpressionUUID->"39954125-dcb5-426f-950c-bd21c89d8946"],
-Cell[1086, 36, 1506, 47, 207, "Output",ExpressionUUID->"1c75e321-1f11-404e-ace1-22c9b5ba1763"]
+Cell[1086, 36, 1506, 47, 185, "Output",ExpressionUUID->"1c75e321-1f11-404e-ace1-22c9b5ba1763"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2629, 88, 497, 12, 28, "Input",ExpressionUUID->"13019721-15c9-4209-b0c7-f89163c6b16c"],
+Cell[3129, 102, 1788, 52, 207, "Output",ExpressionUUID->"62d86425-2641-4e03-a361-a3fa30e70518"]
 }, Open  ]]
 }
 ]
