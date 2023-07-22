@@ -15,20 +15,17 @@
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}
 \end{equation*}
+Substituting $(2k-1)! T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}$ we get
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \binom{n+k-1}{2k-1} \binom{2k}{k-j} j^{2m}
 \end{equation*}
+By means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{k-j} j^{2m}
 \end{equation*}
+Collapsing common terms we get
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{2k} \binom{2k}{k-j} j^{2m}
-\end{equation*}
-\begin{equation*}
-    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \frac{2k}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m}
-\end{equation*}
-\begin{equation*}
-    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m}
 \end{equation*}
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{n+j} \binom{n+j}{k+j} j^{2m}
