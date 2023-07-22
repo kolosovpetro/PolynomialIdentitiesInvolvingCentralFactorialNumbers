@@ -1,16 +1,19 @@
 \subsection{Central factorial numbers}\label{subsec:central-factorial-numbers}
 
 \begin{equation*}
-(2k-1)!T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n} \quad
-(CFNIdentity1)
+(2k-1)
+    !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n} \quad
+    (CFNIdentity1)
 \end{equation*}
 \begin{equation*}
-(2k-1)!T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n} \quad
-(CFNIdentity2)
+(2k-1)
+    !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n} \quad
+    (CFNIdentity2)
 \end{equation*}
 \begin{equation*}
-(2k-1)!T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \quad
-(CFNIdentity3)
+(2k-1)
+    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n} \quad
+    (CFNIdentity3)
 \end{equation*}
 \begin{equation*}
     T(n,k) = \frac{1}{k!} \sum_{j=0} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n} \quad
@@ -22,7 +25,7 @@
     n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}\label{eq:knuth-general}
 \end{equation}
 Equation~\eqref{eq:knuth-general} is validated via Mathematica functions:
-    \textit{OddPowerIdentity1}, \textit{OddPowerIdentity2}, \textit{OddPowerIdentity3}.
+\textit{OddPowerIdentity1}, \textit{OddPowerIdentity2}, \textit{OddPowerIdentity3}.
 Substituting $(2k-1)! T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}$ we get
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \binom{n+k-1}{2k-1} \binom{2k}{k-j} j^{2m} \quad
@@ -52,4 +55,26 @@ By means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k+j} \binom{n-j}{n-k} j^{2m} \quad
     (OddPowerIdentity26)
+\end{equation*}
+
+\subsection{Knuth's formula - approach 2 (to be verified all)}\label{subsec:knuth's-formula---approach-2-(to-be-verified-all)}
+Substituting $(2k-1)! T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}$ we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^j}{k} \binom{n+k-1}{2k-1} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+By means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+Collapsing common terms and by means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
+\end{equation*}
+Because the symmetry of binomial coefficients $\binom{n+k}{k-j} = \binom{n+k}{n+k-(k-j)}$ holds, we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{n+k-j} \binom{n+k-j}{2k-j} (k-j)^{2m}
+\end{equation*}
+By means of binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ we get
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{2k-j} \binom{n+j}{n-k} (k-j)^{2m}
 \end{equation*}
