@@ -25,4 +25,20 @@
     \begin{equation*}
     (2k-1)! T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} (-1)^{j} \binom{2k}{j} (k-j)^{2n}
     \end{equation*}
+    \item Identity in odd power polynomial
+    \begin{equation*}
+        n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}
+    \end{equation*}
+    It is defined as \texttt{OddPowerIdentity1} in mathematica package
+    \begin{equation*}
+        n^{2m-1} = \sum_{k=1}^{m} \mathtt{CFNIdentity1} (m,k) \binom{n+k-1}{2k-1}
+    \end{equation*}
+    It is defined as \texttt{OddPowerIdentity2} in mathematica package
+    \begin{equation*}
+        n^{2m-1} = \sum_{k=1}^{m} \mathtt{CFNIdentity2} (m,k) \binom{n+k-1}{2k-1}
+    \end{equation*}
+    It is defined as \texttt{OddPowerIdentity3} in mathematica package
+    \begin{equation*}
+        n^{2m-1} = \sum_{k=1}^{m} \mathtt{CFNIdentity3} (m,k) \binom{n+k-1}{2k-1}
+    \end{equation*}
 \end{itemize}
