@@ -1,7 +1,12 @@
 \subsection{Knuth's formula for odd power: approach 2}\label{subsec:knuth's-formula-for-odd-power-approach-2}
-\begin{equation}
-    n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}\label{eq:knuth-general}
-\end{equation}
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1} \quad
+    (OddPowerIdentity(1,2,3))
+\end{equation*}
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} T(2m,2k) \fallingFactorial{n+k-1}{2k-1} \quad
+    (OddPowerIdentity4)
+\end{equation*}
 Equation~\eqref{eq:knuth-general} is validated via Mathematica functions:
 \textit{OddPowerIdentity1}, \textit{OddPowerIdentity2}, \textit{OddPowerIdentity3}.
 Substituting $(2k-1)! T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}$ we get
