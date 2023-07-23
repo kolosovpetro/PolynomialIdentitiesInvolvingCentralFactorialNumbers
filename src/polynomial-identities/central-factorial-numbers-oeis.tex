@@ -1,3 +1,13 @@
+From OEIS, recurrence relation
+$T(2n, 2k)$ defines central factorial numbers of the second kind
+\begin{equation*}
+    \begin{cases}
+        T(n,1) &=1 \\
+        T(n,n) &=1 \\
+        T(n,k) &=T(n-1, k-1) + k^2 T(n-1, k)
+    \end{cases} \quad
+    (CentralFactorialNumber1)
+\end{equation*}
 From OEIS, note that this is not Central factorial number itself, this formula is in the mathematica package as
 \texttt{OEISFormula}
 \begin{equation*}
