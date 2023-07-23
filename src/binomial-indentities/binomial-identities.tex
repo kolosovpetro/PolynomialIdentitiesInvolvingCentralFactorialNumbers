@@ -2,10 +2,23 @@
 
 \subsection{Part 1}\label{subsec:part-1}
 \begin{equation}
+    \begin{split}
+        \binom{n}{k} = \frac{n!}{k! (n-k)!}
+        &= \frac{1}{k!} \frac{1 \cdot 2 \cdot 3 \cdots (n-k) \cdot (n-k+1) \cdots n}{1 \cdot 2 \cdot 3 \cdots (n-k)} \\
+        &= \frac{1}{k!} (n-k+1) (n-k+2) (n-k+3) \cdots n \\
+        &= \frac{1}{k!} n (n-1) (n-2) \cdots (n-k+1) \\
+        &= \frac{1}{k!} \prod_{j=1}^{k} (n-j+1) = \frac{1}{k!} \prod_{j=0}^{k-1} (n-j)
+    \end{split}
+\end{equation}
+\begin{equation}
     \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}
 \end{equation}
 \begin{equation}
-    \binom{n}{k} = \frac{n^{\underline{k}}}{k!}
+    \begin{split}
+        \binom{n}{k}
+        &= \frac{n^{\underline{k}}}{k!} = \frac{1}{k!} n (n-1) (n-2) \cdots (n-k+1) \\
+        &= \frac{1}{k!} \prod_{j=1}^{k} (n-j+1) = \frac{1}{k!} \prod_{j=0}^{k-1} (n-j)
+    \end{split}
 \end{equation}
 \begin{equation}
     \sum_{r=0}^{n} \binom{r}{c} = \binom{n+1}{c+1}
