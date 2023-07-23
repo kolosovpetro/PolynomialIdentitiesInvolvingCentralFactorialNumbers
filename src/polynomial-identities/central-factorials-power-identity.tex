@@ -1,0 +1,17 @@
+\subsection{Central factorials power identity}\label{subsec:central-factorials-power-identity}
+Central factorials
+\begin{equation*}
+    \centralFactorial{x}{n} = x \fallingFactorial{x+\frac{n}{2}-1}{n-1} \quad
+    (CentralFactorial1)
+\end{equation*}
+\begin{equation*}
+    \centralFactorial{x}{n} = x \left( x+\frac{n}{2}-1 \right) \left( x+\frac{n}{2}-1 \right) \cdots \left (x+\frac{n}{2}-1 \right)
+\end{equation*}
+\begin{equation*}
+    \centralFactorial{x}{n} = x \prod_{k=1}^{n-1} \left( x+\frac{n}{2}-k \right)
+\end{equation*}
+Then we have power identity given by Knuth
+\begin{equation*}
+    x^m = \sum_{k=1}^{m} T(m, k) \centralFactorial{x}{k} \quad
+    (PowerIdentity1)
+\end{equation*}
