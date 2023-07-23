@@ -16,6 +16,7 @@ CFNIdentity2::usage= "Defines an identity in central factorial numbers (2k-1)! T
 CFNIdentity3::usage= "Defines an identity in central factorial numbers (2k-1)! T(2n, 2k) = \\frac{1}{2k} \\sum_{j=0}^{2k} \\binom{2k}{j} (-1)^{j} (k-j)^{2n}"
 
 OddPowerIdentity1::usage= "Defines an odd power identity n^{2m-1} = \\sum_{k=1}^{m} \\mathtt{CFNIdentity1} (m,k) \\binom{n+k-1}{2k-1}"
+OddPowerIdentityReplaceBinomial1::usage= "Defines an odd power identity n^{2m-1} = \\sum_{k=1}^{m} \\mathtt{CFNIdentity1} (m,k) \\binom{n+k-1}{2k-1}"
 OddPowerIdentity11::usage= "Defines an odd power identity n^{2m-1} = \\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^j}{k} \\binom{2k}{j} \\binom{n+k-1}{2k-1} (k-j)^{2m}"
 OddPowerIdentity12::usage= "Defines an odd power identity n^{2m-1} = \\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^{j}}{k} \\frac{2k}{n+k} \\binom{n+k}{2k} \\binom{2k}{j} (k-j)^{2m}"
 OddPowerIdentity13::usage= "Defines an odd power identity n^{2m-1} = 2\\sum_{k=1}^{m} \\sum_{j=0}^{k} \\frac{(-1)^{j}}{n+k} \\binom{n+k}{j} \\binom{n+k-j}{2k-j} (k-j)^{2m}"
@@ -52,6 +53,7 @@ CFNIdentity2[n_, k_] := (1/k) * Sum[ (-1)^(k-j) * Binomial[2k, k-j] * j^(2n), {j
 CFNIdentity3[n_, k_] := (1/(2k)) * Sum[ (-1)^j * Binomial[2k, j] * (k-j)^(2n), {j, 0, 2k}];
 
 OddPowerIdentity1[n_, m_] := Sum[CFNIdentity1[m, k] * Binomial[n+k-1, 2k-1], {k, 1, m}];
+OddPowerIdentityReplaceBinomial1[n_, m_] := Sum[CFNIdentity1[m, k] * Binomial1[n+k-1, 2k-1], {k, 1, m}];
 OddPowerIdentity11[n_, m_] := Sum[ Sum[ ((-1)^j)/k * Binomial[2k, j] * Binomial[n+k-1, 2k-1] * (k-j)^(2m), {j, 0, k}], {k, 1, m}];
 OddPowerIdentity12[n_, m_] := Sum[ Sum[ ((-1)^j)/k * (2k)/(n+k) * Binomial[n+k, 2k] * Binomial[2k, j] * (k-j)^(2m), {j, 0, k}], {k, 1, m}];
 OddPowerIdentity13[n_, m_] := 2 * Sum[ Sum[ ((-1)^j)/(n+k) * Binomial[n+k, j] * Binomial[n+k-j, 2k-j] * (k-j)^(2m), {j, 0, k}], {k, 1, m}];
@@ -74,6 +76,9 @@ OddPowerIdentity34[n_, m_] := Sum[ Sum[ ((-1)^j / (n+k)) * Binomial[n+k, 2k-j] *
 
 End[ ]
 EndPackage[ ]
+
+
+
 
 
 
