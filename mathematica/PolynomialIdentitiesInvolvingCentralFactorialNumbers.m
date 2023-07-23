@@ -5,6 +5,7 @@ BeginPackage["PolynomialIdentitiesInvolvingCentralFactorialNumbers`"]
 CentralFactorialNumber1::usage= "Recursively defines central factorial numbers of the second kind (in the context of Knuth and Riordan https://arxiv.org/pdf/math/9207222.pdf)"
 CentralFactorialNumber2::usage= "Defines central factorial numbers as polynomial T(n,k) = \\frac{1}{k!} \\sum_{j=0}^{k} \\binom{k}{j} (-1)^{j} \\left( \\frac{1}{2}k - j \\right)^{n}"
 CentralFactorial1::usage= "Defines central factorial \\centralFactorial{x}{n} = x \\fallingFactorial{x+\\frac{n}{2}-1}{n-1}"
+Binomial1::usage= "Defines Binomial coefficient in terms of falling factorials"
 
 PowerIdentity1::usage= "Defines power identity from Knuth x^m = \\sum_{k=1}^{m} T(m, k) \\centralFactorial{x}{k}"
 
@@ -38,6 +39,7 @@ CentralFactorialNumber1[n_, n_] = CentralFactorialNumber1[n_, 1] = 1;
 CentralFactorialNumber1[n_, k_] := CentralFactorialNumber1[n-1, k-1] + k^2 CentralFactorialNumber1[n-1, k];
 CentralFactorialNumber2[n_, k_] := (1/k!) * Sum[Binomial[k, j] * (-1)^j * (1/2*k - j)^n, {j, 0, k}];
 CentralFactorial1[x_, n_] := x * FactorialPower[x+n/2-1, n-1];
+Binomial1[n_, k_] := (1/k!) * Product[n-j+1, {j, 1, k}];
 
 PowerIdentity1[n_, m_] := Sum[ CentralFactorialNumber2[m, k] * CentralFactorial1[n, k], {k, 1, m}];
 
