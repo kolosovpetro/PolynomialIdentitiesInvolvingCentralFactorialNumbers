@@ -19,12 +19,12 @@ D. E. Knuth gives the following recurrence for the central factorial numbers~\ci
     T(2m+2, 2k) = k^2 T(2m,2k) + T(2m, 2k - 2)
 \end{equation*}
 In The On-Line Encyclopedia of Integer Sequences, central factorial numbers~\cite{sloane2000centralfactorial}
-appear to be defined via the following recurrence
+appear to be defined via the following recurrence, let be $U(n,k) = T(2n,2k)$ then
 \begin{equation*}
-    \begin{cases}
-        T(n,1) &=1 \\
-        T(n,n) &=1 \\
-        T(n,k) &=T(n-1, k-1) + k^2 T(n-1, k)
+    U(n,k) = \begin{cases}
+        1, & \text{if } k=1; \\
+        1, & \text{if } k=n; \\
+        U(n-1, k-1) + k^2 U(n-1, k), & \text{otherwise}
     \end{cases}
 \end{equation*}
 It is important to note that central factorial numbers are closely related to the central difference operator $\delta$,
