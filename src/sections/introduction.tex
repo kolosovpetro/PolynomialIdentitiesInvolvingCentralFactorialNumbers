@@ -1,8 +1,8 @@
 Central factorial numbers quietly often appear in literature, like for instance, in Riordan's
 Combinatorial identities~\cite{riordan1968combinatorial}
-\begin{equation*}
-    T(n,k) = \frac{1}{k!} \sum_{j=0}^{k} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
-\end{equation*}
+\begin{equation}
+    T(n,k) = \frac{1}{k!} \sum_{j=0}^{k} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}\label{eq:cfn-riordan}
+\end{equation}
 Also, the book~\cite{carlitz_riordan_1963} references central factorial numbers as
 \begin{equation*}
     K_{rs} = \frac{1}{(2s)!} \sum_{t=0}^{2s} (-1)^t \binom{2s}{t} (s-t)^{2r+2}
@@ -31,7 +31,7 @@ The first is
 (2k-1)
     !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n}\label{eq:cfn-identity-1}
 \end{equation}
-Such that it is derived from the formula given by the~\cite{kolosov2018coefficients}, that is
+Such that it is derived from the formula given by the OEIS sequence A303675~\cite{kolosov2018coefficients}, that is
 \begin{equation*}
     A303675(n,k) = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2[n-k+1]}{j} ([n-k+1]-j)^{2n}
 \end{equation*}
@@ -44,3 +44,8 @@ The second identity is actively used in current manuscript is that
 \end{equation}
 and it is derived from~\eqref{eq:cfn-identity-1} by means
 of symmetry of binomial coefficients $\binom{n}{k} = \binom{n}{n-k}$.
+The third one and final identity we base our results on involves a partial case of the equation~\eqref{eq:cfn-riordan}
+\begin{equation}
+(2k-1)
+    !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}\label{eq:cfn-identity-3}
+\end{equation}
