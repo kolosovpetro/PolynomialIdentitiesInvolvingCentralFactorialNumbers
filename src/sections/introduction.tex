@@ -83,6 +83,8 @@ we easily obtain
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^j}{k} \binom{2k}{j} \binom{n+k-1}{2k-1} (k-j)^{2m}
 \end{equation*}
 Furthermore, by means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$ we get
+\footnote{The majority of binomial identities used in this paper are given by Gross J. L.
+in his book~\cite{gross2016combinatorial}, some of the chapters available online.}
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
 \end{equation*}
@@ -91,3 +93,12 @@ another polynomial identity follows
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
 \end{equation*}
+It is possible to derive more polynomial identities based on binomial relations of symmetry $\binom{n}{k} = \binom{n}{n-k}$
+and an identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$.
+However, let's discuss another example.
+Given an odd power identity~\eqref{eq:knuth-odd-power} we can observe that odd power can be expressed in terms of
+central factorial numbers and falling factorials as follows
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} T(2m,2k) \fallingFactorial{n+k-1}{2k-1}
+\end{equation*}
+Because $\binom{n}{k} = \frac{1}{k!} \fallingFactorial{n}{k}$ where $\fallingFactorial{n}{k}$ is falling factorial.
