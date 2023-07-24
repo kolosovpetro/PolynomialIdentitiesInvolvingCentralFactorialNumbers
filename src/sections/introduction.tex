@@ -1,8 +1,10 @@
 Central factorial numbers quietly often appear in literature, like for instance, in Riordan's
 Combinatorial identities~\cite{riordan1968combinatorial}
 \begin{equation}
-    k! T(n,k) = \sum_{j=0}^{k} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}\label{eq:cfn-riordan}
+    k! T(n,k) = \sum_{j=0}^{k} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
+    \label{eq:cfn-riordan}
 \end{equation}
+where $T(n,k)$ is central factorial number.
 Also, the book~\cite{carlitz_riordan_1963} references central factorial numbers as
 \begin{equation*}
     K_{rs} = \frac{1}{(2s)!} \sum_{t=0}^{2s} (-1)^t \binom{2s}{t} (s-t)^{2r+2}
@@ -88,7 +90,7 @@ in his book~\cite{gross2016combinatorial}, some of the chapters available online
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
 \end{equation*}
-Collapsing common terms and applying binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$
+Collapsing common terms $k$ and applying binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$
 another polynomial identity follows
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
