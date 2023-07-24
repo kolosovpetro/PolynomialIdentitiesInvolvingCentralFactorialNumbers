@@ -102,3 +102,16 @@ central factorial numbers and falling factorials as follows
     n^{2m-1} = \sum_{k=1}^{m} T(2m,2k) \fallingFactorial{n+k-1}{2k-1}
 \end{equation*}
 Because $\binom{n}{k} = \frac{1}{k!} \fallingFactorial{n}{k}$ where $\fallingFactorial{n}{k}$ is falling factorial.
+Yet another odd power identity follows by means of~\eqref{eq:knuth-odd-power} and~\eqref{eq:cfn-identity-2}, that is
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \binom{n+k-1}{2k-1} \binom{2k}{k-j} j^{2m}
+\end{equation*}
+By means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$ we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{k-j} j^{2m}
+\end{equation*}
+Collapsing common terms $k$ and applying the binomial identity
+$\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ yields
+\begin{equation*}
+    n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m}
+\end{equation*}
