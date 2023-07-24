@@ -49,3 +49,24 @@ The third one and final identity we base our results on involves a partial case 
 (2k-1)
     !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}\label{eq:cfn-identity-3}
 \end{equation}
+So that now let's stick to some results of the D. E. Knuth's work~\cite{knuth1993johann},
+in particular to the polynomial identities.
+For odd powers we have
+\begin{equation}
+    n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}\label{eq:knuth-odd-power}
+\end{equation}
+And for any natural $m$ we have polynomial identity
+\begin{equation}
+    x^m = \sum_{k=1}^{m} T(m, k) \centralFactorial{x}{k}\label{eq:knuth-power-identity}
+\end{equation}
+where $\centralFactorial{x}{k}$ denotes central factorial defined by
+\begin{equation*}
+    \centralFactorial{x}{n} = x \fallingFactorial{x+\frac{n}{2}-1}{n-1}
+\end{equation*}
+where $\fallingFactorial{n}{k} = n (n-1) (n-2) \cdots (n-k+1)$ denotes falling factorial in Knuth's notation.
+In particular,
+\begin{equation*}
+    \centralFactorial{x}{n}
+    = x \left( x+\frac{n}{2}-1 \right) \left( x+\frac{n}{2}-1 \right) \cdots \left (x+\frac{n}{2}-n-1 \right)
+    = x \prod_{k=1}^{n-1} \left( x+\frac{n}{2}-k \right)
+\end{equation*}
