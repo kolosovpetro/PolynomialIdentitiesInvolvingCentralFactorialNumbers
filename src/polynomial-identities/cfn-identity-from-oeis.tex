@@ -1,5 +1,14 @@
-From OEIS, note that this is not Central factorial number itself, this formula is in the mathematica package as
-\texttt{OEISFormula}
+\subsection{Central factorial numbers from OEIS}\label{subsec:central-factorial-numbers-from-oeis}
+$T(n,k)$ recursively defines central factorial numbers of the second kind
+\begin{equation*}
+    \begin{cases}
+        T(n,1) &=1 \\
+        T(n,n) &=1 \\
+        T(n,k) &=T(n-1, k-1) + k^2 T(n-1, k)
+    \end{cases} \quad
+    (CentralFactorialNumber1)
+\end{equation*}
+From OEIS, note that this is not Central factorial number itself
 \begin{equation*}
     T_{\mathrm{OEIS}} (n,k) = \frac{1}{m} \sum_{j=0}^{m} (-1)^{j} \binom{2m}{j} (m-j)^{2n}
 \end{equation*}
