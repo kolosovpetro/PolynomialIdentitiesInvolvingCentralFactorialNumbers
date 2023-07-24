@@ -1,10 +1,11 @@
 \subsection{Central factorial numbers from OEIS}\label{subsec:central-factorial-numbers-from-oeis}
-$T(n,k)$ recursively defines central factorial numbers of the second kind
+$T(n,k)$ recursively defines central factorial numbers of the second kind.
+Let be $U(n,k) = T(2n,2k)$ then
 \begin{equation*}
-    \begin{cases}
-        T(n,1) &=1 \\
-        T(n,n) &=1 \\
-        T(n,k) &=T(n-1, k-1) + k^2 T(n-1, k)
+    U(n,k) = \begin{cases}
+                 1, & \text{if } k=1; \\
+                 1, & \text{if } k=n; \\
+                 U(n-1, k-1) + k^2 U(n-1, k), & \text{otherwise}
     \end{cases} \quad
     (CentralFactorialNumber1)
 \end{equation*}
