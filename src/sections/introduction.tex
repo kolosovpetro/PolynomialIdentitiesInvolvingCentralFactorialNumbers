@@ -23,4 +23,24 @@ via the following recurrence
 It is important to note that central factorial numbers are closely related to the central difference operator $\delta$,
 Newton interpolation formula and central factorials $\centralFactorial{x}{n}$ and could be derived respectively.
 The derivation of central factorial numbers by means of central difference operator $\delta$,
-Newton interpolation formula and central factorials $\centralFactorial{x}{n}$ is shown at~\cite{scheuer2020mathstackexchange}.
+Newton interpolation formula and central factorials $\centralFactorial{x}{n}$
+is shown at~\cite{scheuer2020mathstackexchange}.
+So there are few central factorial numbers identities at our disposal.
+The first is
+\begin{equation}
+(2k-1)
+    !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^j \binom{2k}{j} (k-j)^{2n}\label{eq:cfn-identity-1}
+\end{equation}
+Such that it is derived from the formula given by the~\cite{kolosov2018coefficients}, that is
+\begin{equation*}
+    A303675(n,k) = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2[n-k+1]}{j} ([n-k+1]-j)^{2n}
+\end{equation*}
+Note that the term $n-k+1$ is given only to serve proper sequence offset and can be replaced easily by iterator $k$
+so that we have arrived to the identity~\eqref{eq:cfn-identity-1}.
+The second identity is actively used in current manuscript is that
+\begin{equation}
+(2k-1)
+    !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}\label{eq:cfn-identity-2}
+\end{equation}
+and it is derived from~\eqref{eq:cfn-identity-1} by means
+of symmetry of binomial coefficients $\binom{n}{k} = \binom{n}{n-k}$.
