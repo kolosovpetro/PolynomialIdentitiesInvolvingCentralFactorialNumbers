@@ -78,6 +78,7 @@ In particular,
     = x \prod_{k=1}^{n-1} \left( x+\frac{n}{2}-k \right)
 \end{equation*}
 So that having the whole context of the topic, we can derive and discuss few other polynomial identities smoothly.
+
 For example, given the Knuth's odd power identity~\eqref{eq:knuth-odd-power}
 and identity in central factorial numbers~\eqref{eq:cfn-identity-1}
 we easily obtain
@@ -97,13 +98,15 @@ another polynomial identity follows
 \end{equation*}
 It is possible to derive more polynomial identities based on binomial relations of symmetry $\binom{n}{k} = \binom{n}{n-k}$
 and an identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$.
-However, let's discuss another example.
-Given an odd power identity~\eqref{eq:knuth-odd-power} we can observe that odd power can be expressed in terms of
+
+So for now, let's smoothly switch our discussion to another example.
+Given an odd power identity~\eqref{eq:knuth-odd-power} we can observe that odd powered polynomial can be expressed in terms of
 central factorial numbers and falling factorials as follows
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} T(2m,2k) \fallingFactorial{n+k-1}{2k-1}
 \end{equation*}
 Because $\binom{n}{k} = \frac{1}{k!} \fallingFactorial{n}{k}$ where $\fallingFactorial{n}{k}$ is falling factorial.
+
 Yet another odd power identity follows by means of~\eqref{eq:knuth-odd-power} and~\eqref{eq:cfn-identity-2}, that is
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{k} \binom{n+k-1}{2k-1} \binom{2k}{k-j} j^{2m}
@@ -116,4 +119,20 @@ Collapsing common terms $k$ and applying the binomial identity
 $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$ yields
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{k-j}}{n+k} \binom{n+k}{k-j} \binom{n+j}{k+j} j^{2m}
+\end{equation*}
+
+As the final part of our discussion, consider the polynomial identities based on odd power identity~\eqref{eq:knuth-odd-power}
+and identity in central factorial numbers~\eqref{eq:cfn-identity-3}.
+Replacing the term $(2k-1)!T(2n, 2k)$ in~\eqref{eq:knuth-odd-power} we get
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{2k} \binom{n+k-1}{2k-1} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+Continuing similarly with the binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$ yields
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
+\end{equation*}
+So that now we are free applying the binomial identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$
+to obtain
+\begin{equation*}
+    n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{2k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
 \end{equation*}
