@@ -13,6 +13,7 @@ FallingFactorial1::usage= "Defines falling factorial"
 
 PowerIdentity1::usage= "Defines power identity from Knuth x^m = \\sum_{k=1}^{m} T(m, k) \\centralFactorial1{x}{k}"
 PowerIdentity2::usage= "Defines power identity from Knuth x^m = \\sum_{k=1}^{m} T(m, k) \\centralFactorial2{x}{k}"
+PowerIdentity3::usage= "Defines power identity "
 
 CFNIdentity1::usage= "Defines an identity in central factorial numbers (2k-1)! T(2n,2k) = \\frac{1}{k} \\sum_{j=0}^{k} (-1)^j \\binom{2k}{j} (k-j)^{2n}"
 CFNIdentity2::usage= "Defines an identity in central factorial numbers (2k-1)! T(2n,2k) = \\frac{1}{k} \\sum_{j=0}^{k} (-1)^{k-j} \\binom{2k}{k-j} j^{2n}"
@@ -55,6 +56,7 @@ FallingFactorial1[n_, k_] := Product[n-j, {j, 0, k-1}];
 
 PowerIdentity1[n_, m_] := Sum[ CentralFactorialNumber2[m, k] * CentralFactorial1[n, k], {k, 1, m}];
 PowerIdentity2[n_, m_] := Sum[ CentralFactorialNumber2[m, k] * CentralFactorial2[n, k], {k, 1, m}];
+PowerIdentity3[n_, m_] := Sum[ CentralFactorialNumber3[m, k] * Product[(n-j^2), {j, 0, k}], {k, 1, m}];
 
 CFNIdentity1[n_, k_] := (1/k) * Sum[ (-1)^j * Binomial[2k, j] * (k-j)^(2n), {j, 0, k}];
 CFNIdentity2[n_, k_] := (1/k) * Sum[ (-1)^(k-j) * Binomial[2k, k-j] * j^(2n), {j, 0, k}];
