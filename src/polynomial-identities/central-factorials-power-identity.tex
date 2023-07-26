@@ -17,7 +17,8 @@ Then we have power identity given by Knuth
     (PowerIdentity1, PowerIdentity2)
 \end{equation*}
 \begin{equation*}
-    x^m = \sum_{k=1}^{m} T(m, k) (x-1^2)(x-2^2)\cdots(x-k^2) = \sum_{k=1}^{m} T(m, k) \prod_{j=0}^{k} (n-j^2)
+    x^m = \sum_{k=1}^{m} T(m, k) (x-1^2)(x-2^2)\cdots(x-k^2) = \sum_{k=1}^{m} T(m, k) \prod_{j=0}^{k-1} (x-j^2) \quad
+    (PowerIdentity3)
 \end{equation*}
 \begin{equation*}
     \mathtt{PowerProduct}(n, k) = \prod_{j=0}^{k} (n-j^2)
