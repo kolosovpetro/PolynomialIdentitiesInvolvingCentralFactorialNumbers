@@ -5,6 +5,7 @@ BeginPackage["PolynomialIdentitiesInvolvingCentralFactorialNumbers`"]
 CentralFactorialNumber1::usage= "Recursively defines central factorial numbers of the second kind (in the context of Knuth and Riordan https://arxiv.org/pdf/math/9207222.pdf)"
 CentralFactorialNumber2::usage= "Defines central factorial numbers as polynomial T(n,k) = \\frac{1}{k!} \\sum_{j=0}^{k} \\binom{k}{j} (-1)^{j} \\left( \\frac{1}{2}k - j \\right)^{n}"
 CentralFactorialNumber3::usage= "Defines central factorial numbers T(2n,2k) = 2 \\sum_{j=1}^{k} (-1)^{k-j} \\frac{j^{2m}}{(k-j)! (k+j)!}"
+CentralFactorialNumber4::usage= "Defines central factorial numbers "
 CentralFactorial1::usage= "Defines central factorial \\centralFactorial{x}{n} = x \\fallingFactorial{x+\\frac{n}{2}-1}{n-1}"
 CentralFactorial2::usage= "Defines central factorial \\centralFactorial{x}{n} = x \\prod_{k=1}^{n-1} \\left( x+\\frac{n}{2}-k \\right)"
 Binomial1::usage= "Defines Binomial coefficient in terms of falling factorials"
@@ -49,6 +50,7 @@ CentralFactorialNumber1[n_, n_] = CentralFactorialNumber1[n_, 1] = 1;
 CentralFactorialNumber1[n_, k_] := CentralFactorialNumber1[n-1, k-1] + k^2 CentralFactorialNumber1[n-1, k];
 CentralFactorialNumber2[n_, k_] := (1/k!) * Sum[Binomial[k, j] * (-1)^j * (1/2*k - j)^n, {j, 0, k}];
 CentralFactorialNumber3[n_, k_] := 2 * Sum[ (-1)^(k-j) * (j^(2n))/((k-j)! * (k+j)!), {j, 1, k}];
+CentralFactorialNumber4[n_, k_] := (1/(k * (2k-1)!)) * Sum[ (-1)^(k-j) * Binomial[2k, k-j] * j^(2n), {j, 0, k}];
 CentralFactorial1[x_, n_] := x * FactorialPower[x+n/2-1, n-1];
 CentralFactorial2[x_, n_] := x * Product[x+n/2-k, {k, 1, n-1}];
 Binomial1[n_, k_] := (1/k!) * Product[n-j+1, {j, 1, k}];
