@@ -1,5 +1,5 @@
 Central factorial numbers quietly often appear in literature, like for instance, in Riordan's
-Combinatorial identities~\cite[p. 217, Table 6.2(a)]{riordan1968combinatorial}
+Combinatorial identities~\cite[p. 217]{riordan1968combinatorial}
 \begin{equation}
     k! T(n,k) = \sum_{j=0}^{k} \binom{k}{j} (-1)^{j} \left( \frac{1}{2}k - j \right)^{n}
     \label{eq:cfn-riordan}
@@ -26,6 +26,10 @@ appear to be defined via the following recurrence, let be $U(n,k) = T(2n,2k)$ th
         1, & \text{if } k=n; \\
         U(n-1, k-1) + k^2 U(n-1, k), & \text{otherwise}
     \end{cases}
+\end{equation*}
+Moreover, the OEIS sequence~\cite{sloane2000triangle} gives another representation of the central factorial numbers
+\begin{equation*}
+    T(2n,2k) = 2 \sum_{j=1}^{k} (-1)^{k-j} \frac{j^{2n}}{(k-j)! (k+j)!}
 \end{equation*}
 It is important to note that central factorial numbers are closely related to the central difference operator $\delta$,
 Newton interpolation formula and central factorials $\centralFactorial{x}{n}$ and could be derived respectively.
@@ -56,6 +60,7 @@ The third one and final identity we base our results on involves a partial case 
 (2k-1)
     !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}\label{eq:cfn-identity-3}
 \end{equation}
+
 So that now let's stick to the results of D. E. Knuth's work~\cite{knuth1993johann},
 in particular to the polynomial identities.
 For odd powers we have
