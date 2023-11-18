@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+
+\bibitem{riordan1968combinatorial}
+J.~Riordan.
+\newblock {\em {Combinatorial Identities}}.
+\newblock {Wiley series in probability and mathematical statistics}. Wiley,
+  1968.
+
+\bibitem{carlitz_riordan_1963}
+L.~Carlitz and John Riordan.
+\newblock {The Divided Central Differences of Zero}.
+\newblock {\em {Canadian Journal of Mathematics}}, 15:94–100, 1963.
+
+\bibitem{knuth1993johann}
+Donald~E Knuth.
+\newblock {Johann Faulhaber and sums of powers}.
+\newblock {\em Mathematics of Computation}, 61(203):277--294, 1993.
+
+\bibitem{sloane2000centralfactorial}
+{Sloane, N. J. A.}
+\newblock {Triangle of central factorial numbers, Entry A008957 in The On-Line
+  Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A008957}, 2000.
+
+\bibitem{sloane2000triangle}
+{Sloane, N. J. A.}
+\newblock {Triangle of central factorial numbers, Entry A036969 in The On-Line
+  Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A036969}, 2000.
+
+\bibitem{scheuer2020mathstackexchange}
+{Scheuer, Markus}.
+\newblock {MathStackExchange answer 3665722/463487}.
+\newblock Published electronically at
+  \url{https://math.stackexchange.com/a/3665722/463487}, 2020.
+
+\bibitem{kolosov2018coefficients}
+{Kolosov, Petro and Luschny, Peter}.
+\newblock {Coefficients in the sum of odd powers as expressed by Faulhaber’s
+  theorem, Entry A303675 in The On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A303675}, 2018.
+
+\bibitem{gross2016combinatorial}
+Jonathan~L Gross.
+\newblock {\em Combinatorial methods with computer applications}.
+\newblock CRC Press, 2016.
+
+\bibitem{kolosov2023polynomial}
+Petro Kolosov.
+\newblock {Polynomial identities involving Central Factorial numbers (Source
+  files)}.
+\newblock Published electronically at
+  \url{https://github.com/kolosovpetro/PolynomialIdentitiesInvolvingCentralFactorialNumbers},
+  2022.
+
+\end{thebibliography}
