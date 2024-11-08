@@ -27,8 +27,8 @@ as the following recurrence relation.
 Let be $U(n,k) = T(2n, 2k)$ then
 \begin{equation*}
     U(n,k) = \begin{cases}
-        1, & \text{if } k=1; \\
-        1, & \text{if } k=n; \\
+        1, & \text{if } k=1 \\
+        1, & \text{if } k=n \\
         U(n-1, k-1) + k^2 U(n-1, k), & \text{otherwise}
     \end{cases}
 \end{equation*}
@@ -41,7 +41,7 @@ Newton interpolation formula and central factorials $\centralFactorial{x}{n}$.
 A process of derivation of central factorial numbers by applying central difference operator $\delta$,
 Newton interpolation formula and central factorials $\centralFactorial{x}{n}$
 is provided by the MathStackExchange discussion~\cite{scheuer2020mathstackexchange}.
-So there are few central factorial numbers identities at our disposal.
+So there are a few identities in central factorial numbers at our disposal.
 The first is
 \begin{equation}
 (2k-1)
@@ -49,30 +49,32 @@ The first is
 \end{equation}
 Such that it is derived from the formula given by the OEIS sequence A303675~\cite{kolosov2018coefficients}, that is
 \begin{equation*}
-    A303675(n,k) = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2[n-k+1]}{j} ([n-k+1]-j)^{2n}
+    A303675(n,k) = \frac{1}{n-k+1} \sum_{j=0}^{n-k+1} (-1)^{j} \binom{2(n-k+1)}{j} ((n-k+1)-j)^{2n}
 \end{equation*}
-Note that the term $n-k+1$ is given only to serve proper sequence offset and can be replaced easily by iterator $k$
-so that we have arrived to the identity~\eqref{eq:cfn-identity-1}.
-The second identity is actively used in current manuscript is that
+Note that the term $n-k+1$ is given only to serve proper sequence offset
+and can be omitted by iterator $k$ which yields the identity~\eqref{eq:cfn-identity-1}.
+The second identity is actively used in current manuscript is
 \begin{equation}
 (2k-1)
     !T(2n,2k) = \frac{1}{k} \sum_{j=0}^{k} (-1)^{k-j} \binom{2k}{k-j} j^{2n}\label{eq:cfn-identity-2}
 \end{equation}
-and it is derived from~\eqref{eq:cfn-identity-1} by means
-of symmetry of binomial coefficients $\binom{n}{k} = \binom{n}{n-k}$.
-The third one and final identity we base our results on involves a partial case of the equation~\eqref{eq:cfn-riordan}
+which is derived by inversion of the sum~\eqref{eq:cfn-identity-1}.
+The third one and the final identity we base our results on
+involves a partial case of the equation~\eqref{eq:cfn-riordan}
 \begin{equation}
 (2k-1)
     !T(2n, 2k) = \frac{1}{2k} \sum_{j=0}^{2k} \binom{2k}{j} (-1)^{j} (k-j)^{2n}\label{eq:cfn-identity-3}
 \end{equation}
 
-So that now let's stick to the results of D. E. Knuth's work~\cite{knuth1993johann},
-in particular to the polynomial identities.
+So that now we review the results of Knuth's work
+\textit{Johann Faulhaber and sums of powers}~\cite[p. 10]{knuth1993johann},
+in particular odd-power polynomial identities.
 For odd powers we have
 \begin{equation}
     n^{2m-1} = \sum_{k=1}^{m} (2k-1)! T(2m,2k) \binom{n+k-1}{2k-1}\label{eq:knuth-odd-power}
 \end{equation}
-And for any natural $m$ we have polynomial identity
+And for any integer power $m$ there is an identity in terms of central factorial numbers and
+central factorials
 \begin{equation}
     x^m = \sum_{k=1}^{m} T(m, k) \centralFactorial{x}{k}\label{eq:knuth-power-identity}
 \end{equation}
@@ -89,7 +91,7 @@ In particular,
 \end{equation*}
 So that having the whole context of the topic, we can derive and discuss few other polynomial identities smoothly.
 
-For example, given the Knuth's odd power identity~\eqref{eq:knuth-odd-power}
+For example, given odd power identity~\eqref{eq:knuth-odd-power}
 and identity in central factorial numbers~\eqref{eq:cfn-identity-1}
 we easily obtain
 \begin{equation*}
@@ -97,7 +99,7 @@ we easily obtain
 \end{equation*}
 Furthermore, by means of binomial identity $\frac{k}{n} \binom{n}{k} = \binom{n-1}{k-1}$ we get
 \footnote{The majority of binomial identities used in this paper are given by Gross J. L.
-in his book~\cite{gross2016combinatorial}, some of the chapters available online.}
+in his book \textit{Combinatorial methods with computer applications}~\cite{gross2016combinatorial}, chapter 4.}
 \begin{equation*}
     n^{2m-1} = \sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{k} \frac{2k}{n+k} \binom{n+k}{2k} \binom{2k}{j} (k-j)^{2m}
 \end{equation*}
@@ -106,10 +108,11 @@ another polynomial identity follows
 \begin{equation*}
     n^{2m-1} = 2\sum_{k=1}^{m} \sum_{j=0}^{k} \frac{(-1)^{j}}{n+k} \binom{n+k}{j} \binom{n+k-j}{2k-j} (k-j)^{2m}
 \end{equation*}
-It is possible to derive more polynomial identities based on binomial relations of symmetry $\binom{n}{k} = \binom{n}{n-k}$
-and an identity $\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$.
+It is possible to derive more polynomial identities based on binomial coefficients symmetry
+$\binom{n}{k} = \binom{n}{n-k}$ and an identity in binomial coefficients
+$\binom{n}{m} \binom{m}{k} = \binom{n}{k} \binom{n-k}{m-k}$.
 
-So for now, let's smoothly switch our discussion to another example.
+So for now, we smoothly switch our discussion to another example.
 Given an odd power identity~\eqref{eq:knuth-odd-power} we can observe that odd powered polynomial can be expressed in terms of
 central factorial numbers and falling factorials as follows
 \begin{equation*}
@@ -150,4 +153,4 @@ to obtain
 
 The remaining opportunity to show a few more power identities lays in replacing the corresponding coefficient $T(n,k)$
 in~\eqref{eq:knuth-power-identity} by identities
-in central factorial numbers~\eqref{eq:cfn-identity-1},~\eqref{eq:cfn-identity-2},~\eqref{eq:cfn-identity-3}
+in central factorial numbers~\eqref{eq:cfn-identity-1},~\eqref{eq:cfn-identity-2},~\eqref{eq:cfn-identity-3}.

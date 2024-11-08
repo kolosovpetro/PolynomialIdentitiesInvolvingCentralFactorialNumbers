@@ -7,16 +7,16 @@ Reallocating 'name_of_file' (item size: 1) to 53 items.
 Database file #1: PolynomialIdentitiesInvolvingCentralFactorialNumbers.bib
 You've used 10 entries,
             1791 wiz_defined-function locations,
-            507 strings with 5653 characters,
-and the built_in function-call counts, 1570 in all, are:
-= -- 139
+            509 strings with 5751 characters,
+and the built_in function-call counts, 1588 in all, are:
+= -- 143
 > -- 44
 < -- 0
 + -- 21
 - -- 11
 * -- 50
-:= -- 254
-add.period$ -- 31
+:= -- 258
+add.period$ -- 33
 call.type$ -- 10
 change.case$ -- 7
 chr.to.int$ -- 0
@@ -24,13 +24,13 @@ cite$ -- 10
 duplicate$ -- 73
 empty$ -- 196
 format.name$ -- 11
-if$ -- 364
+if$ -- 368
 int.to.chr$ -- 0
 int.to.str$ -- 10
 missing$ -- 8
-newline$ -- 53
+newline$ -- 55
 num.names$ -- 10
-pop$ -- 51
+pop$ -- 49
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -45,4 +45,4 @@ type$ -- 0
 warning$ -- 0
 while$ -- 13
 width$ -- 12
-write$ -- 105
+write$ -- 109
