@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{riordan1968combinatorial}
 J.~Riordan.
@@ -11,10 +11,16 @@ L.~Carlitz and John Riordan.
 \newblock {The Divided Central Differences of Zero}.
 \newblock {\em {Canadian Journal of Mathematics}}, 15:94–100, 1963.
 
+\bibitem{steffensen1927interpolation}
+Johan~Frederik Steffensen.
+\newblock {\em Interpolation}.
+\newblock Williams \& Wilkins, 1927.
+
 \bibitem{knuth1993johann}
-Donald~E Knuth.
+{Knuth, Donald E.}
 \newblock {Johann Faulhaber and sums of powers}.
-\newblock {\em Mathematics of Computation}, 61(203):277--294, 1993.
+\newblock {\em {Mathematics of Computation}}, 61(203):277--294, 1993.
+\newblock \url{https://arxiv.org/abs/math/9207222}.
 
 \bibitem{sloane2000centralfactorial}
 {Sloane, N. J. A.}
@@ -41,9 +47,10 @@ Donald~E Knuth.
 \newblock Published electronically at \url{https://oeis.org/A303675}, 2018.
 
 \bibitem{gross2016combinatorial}
-Jonathan~L Gross.
-\newblock {\em Combinatorial methods with computer applications}.
-\newblock CRC Press, 2016.
+Jonathan~L. Gross.
+\newblock {\em {Combinatorial methods with computer applications}}.
+\newblock {CRC Press}, 2016.
+\newblock \url{https://kolosovpetro.github.io/pdf/CM4.pdf}.
 
 \bibitem{kolosov2023polynomial}
 Petro Kolosov.
