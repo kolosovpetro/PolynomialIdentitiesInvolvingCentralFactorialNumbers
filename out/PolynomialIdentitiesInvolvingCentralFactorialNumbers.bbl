@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{riordan1968combinatorial}
 J.~Riordan.
@@ -51,13 +51,5 @@ Jonathan~L. Gross.
 \newblock {\em {Combinatorial methods with computer applications}}.
 \newblock {CRC Press}, 2016.
 \newblock \url{https://kolosovpetro.github.io/pdf/CM4.pdf}.
-
-\bibitem{kolosov2023polynomial}
-Petro Kolosov.
-\newblock {Polynomial identities involving Central Factorial numbers (Source
-  files)}.
-\newblock Published electronically at
-  \url{https://github.com/kolosovpetro/PolynomialIdentitiesInvolvingCentralFactorialNumbers},
-  2022.
 
 \end{thebibliography}
